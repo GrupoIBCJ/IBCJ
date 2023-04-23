@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Musical</title>
+    <link rel="icon" href="https://i.imgur.com/XmVOmEk.png" type="image/png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .nav-item {
+            margin-left: 35px;
+            margin-right: 35px;
+}
+
+        body {
+            margin: 0;
+            margin-top: 0vh; /* Ajuste o valor conforme necessário */
+            position: relative;
+            background-image: url("https://i.imgur.com/tQXLqDF.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Define a altura mínima do body para ocupar a tela inteira */
+}
+
+        .carrossel-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o tamanho da div */
+            position: relative; /* Define a posição como relativa para posicionar corretamente o carrossel */
+            border: 0px solid #1e1d1d; /* Adiciona a borda */
+            border-radius: 10px; /* Arredondamento dos cantos da borda */
+}
+
+        .carrossel {
+    
+    margin-top: -15vh; /* Ajuste o valor conforme necessário */
+    width: 50%;
+    height: 100%;
+    position: absolute; /* Define a posição como absoluta */
+    top: 0;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+        .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh; /* Ajuste a altura conforme necessário */
+    background-color: #ede4e4; /* Escolha uma cor de fundo para o rodapé */
+    border-top: 0px solid #eee6e6; /* Adiciona uma borda superior */
+}
+
+.container-carrossel {
+    position: relative;
+    z-index: 1; /* Isso garantirá que o carrossel apareça acima do plano de fundo */
+}
+
+        .carousel-caption {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 4 rem;
+            border-radius: 5px;
+        }
+
+        .meu-botao {
+            background-color: #444547; /* A cor que deseja para o fundo do botão */
+            color: rgb(255, 255, 255); /* A cor do texto do botão */
+        }
+
+        /* Estilização adicional ao passar o mouse */
+        .meu-botao:hover {
+            background-color: #f73500;
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+        
+ #meuMenu .navbar-brand {
+    width: 70px;
+    height: auto;
+    padding: 0;
+    color: white;
+}
+
+#meuMenu .navbar {
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+
+    </style>
+</head>
+
+<body>   
+  
+    <nav id="meuMenu" class="navbar navbar-expand-lg navbar-light" style="background-color: #ede4e4;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Início <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Recursos</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="file:///C:/Users/bruno/OneDrive/%C3%81rea%20de%20Trabalho/Projeto%20USJT/contato.html">Contato</a>
+        </li>
+        </ul>
+        </div>
+
+        </nav>
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-12 text-left">
+                <div class="custom-text-box">
+                  <p>Seu texto aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carrossel-wrapper">
+              <div id="meuCarrossel" class="carousel slide carrossel" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                      <li data-target="#meuCarrossel" data-slide-to="0" class="active"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="1"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="2"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="3"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="4"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="5"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="6"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="7"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="8"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="9"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="10"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="11"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="12"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="13"></li>
+                      <li data-target="#meuCarrossel" data-slide-to="14"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="https://i.imgur.com/CqptjmM.png" class="d-block w-100" alt="Violão">
+                          <div class="carousel-caption d-none d-md-block">
+                              <a href="file:///C:/Users/bruno/OneDrive/%C3%81rea%20de%20Trabalho/Projeto%20USJT/index.html" class="btn meu-botao">Violão</a>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://i.imgur.com/sMYJHP4.png" class="d-block w-100" alt="Guitarra">
+                          <div class="carousel-caption d-none d-md-block">
+                              <a href="url_do_instrumento_guitarra" class="btn meu-botao">Guitarra</a>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://i.imgur.com/A7WusqA.png" class="d-block w-100" alt="Piano">
+                          <div class="carousel-caption d-none d-md-block">
+                              <a href="url_do_instrumento_piano" class="btn meu-botao">Piano</a>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://i.imgur.com/rb8kuaC.png" class="d-block w-100" alt="Baixo">
+                          <div class="carousel-caption d-none d-md-block">
+                              <a href="url_do_instrumento_1" class="btn meu-botao">Baixo</a>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://i.imgur.com/QKzEO2O.png" class="d-block w-100" alt="Violino">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Violino</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/9daSArL.png" class="d-block w-100" alt="Saxofone">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Saxofone</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/z541NcL.png" class="d-block w-100" alt="Trompete">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Trompete</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/0GjQm07.png" class="d-block w-100" alt="Flauta">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Flauta</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/avFe5QR.png" class="d-block w-100" alt="Ukulele">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Ukulele</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/7hD16Xs.png" class="d-block w-100" alt="Bateria">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Bateria</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/88OSrwU.png" class="d-block w-100" alt="Amplificador">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Amplificador</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/Hrim2BX.png" class="d-block w-100" alt="Microfone">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Microfone</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/AhBjmAT.png" class="d-block w-100" alt="Mixer">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Mixer</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/uiiHSCx.png" class="d-block w-100" alt="Fone De Ouvido">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Fone De Ouvido</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/lybrBGd.png" class="d-block w-100" alt="Pedal">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="url_do_instrumento_1" class="btn meu-botao">Pedal</a>
+                        </div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#meuCarrossel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next" href="#meuCarrossel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                    </a>
+                    </div>
+                    
+                      </div>
+                      <script>
+                          $(document).ready(function () {
+                              // Centraliza o carrossel verticalmente
+                              function centerCarousel() {
+                                  var carouselHeight = $(".carrossel").height();
+                                  var windowHeight = $(window).height();
+                                  var topMargin = (windowHeight - carouselHeight) / 2;
+                                  $(".carrossel-wrapper").css("margin-top", topMargin);
+                              }
+                      
+                              // Centraliza o carrossel ao carregar a página e ao redimensionar a janela
+                              centerCarousel();
+                              $(window).on("resize", centerCarousel);
+                          });
+                      </script>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">&copy; 2023 - Clube Dos Instrumentos. Todos os direitos reservados. Dúvidas? Entre em contato conosco para obter mais informações sobre nossos produtos. </p>
+        </div>
+    </footer>
+</body>
+                    </html>
