@@ -1,2 +1,0 @@
-Fechar porta: taskkill /F /PID (Número do PID) 
-Consultar porta CMD: netstat -ano | findstr :3000
