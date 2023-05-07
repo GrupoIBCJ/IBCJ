@@ -8,4 +8,7 @@ router.get('/', itensController.getItens);
 // Rota para buscar itens por categoria
 router.get('/categoria/:categoria_id', itensController.getItensByCategory);
 
+// Rota para buscar itens por termo de pesquisa
+router.get('/search', itensController.getItensBySearchTerm);
+
 module.exports = router;

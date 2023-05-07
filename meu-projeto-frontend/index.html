@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca de Instrumentos Musicais</title>
+</head>
+<body>
+  <h1>Busca de Instrumentos Musicais</h1>
+  <input type="text" id="searchTe rm" placeholder="Digite o termo de pesquisa...">
+  <button id="searchButton">Pesquisar</button>
+  <ul id="results"></ul>
+
+  <script>
+document.getElementById("searchButton").addEventListener("click", () => {
+  const searchTerm = document.getElementById("searchTerm").value;
+  console.log(searchTerm)
+  fetch(`http://localhost:3000/itens/search?term=${searchTerm}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Dados recebidos:", data);
+      const resultsElement = document.getElementById("results");
+      resultsElement.innerHTML = "";
+      data.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item.nome;
+        resultsElement.appendChild(li);
+      });
+    })
+    .catch((error) => {
+      console.error("Erro ao realizar pesquisa:", error);
+    });
+});
+
+// Criar um evento personalizado chamado 'instrumentosPesquisados'
+const instrumentosPesquisadosEvent = new CustomEvent("instrumentosPesquisados", {
+  detail: {
+    message: "Os instrumentos foram pesquisados.",
+  },
+});
+
+// Adicionar um ouvinte de evento para 'instrumentosPesquisados'
+document.addEventListener("instrumentosPesquisados", (e) => {
+  console.log("Evento instrumentosPesquisados ouvido:", e.detail.message);
+});
+
+// Emitir o evento personalizado
+document.dispatchEvent(instrumentosPesquisadosEvent);
+
+  </script>
+  
+  
+</body>
+</html>
